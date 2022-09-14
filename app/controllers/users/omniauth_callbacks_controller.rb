@@ -22,25 +22,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  # More info at:
-  # https://github.com/heartcombo/devise#omniauth
-
-  # GET|POST /resource/auth/twitter
-  # def passthru
-  #   super
-  # end
-
-  # GET|POST /users/auth/twitter/callback
-  # def failure
-  #   super
-  # end
-
-  # protected
-
-  # The path used when OmniAuth fails
-  # def after_omniauth_failure_path_for(scope)
-  #   super(scope)
-  # end
 
   protected
 
@@ -54,14 +35,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   private
 
-  # def from_google_params
-  #   @from_google_params ||= {
-  #     uid: auth.uid,
-  #     email: auth.info.email,
-  #     full_name: auth.info.name,
-  #     avatar_url: auth.info.image
-  #   }
-  # end
+
 
   def auth
     @auth ||= request.env['omniauth.auth']
